@@ -1,0 +1,36 @@
+<h1 style="text-align: center; color: red">SHIVRAJ</h1>
+
+<!-- <div *ngFor="let user of $users | async">{{ user.name }}</div> -->
+
+<!-- <div *ngFor="let item of users$ | async">
+  {{ item.name }}
+</div> -->
+
+<!-- <div *ngFor="let username of username$ | async">
+  {{ username }}
+</div> -->
+
+<!-- <div *ngFor="let user of filteredUsers$ | async">
+  {{ user }}
+</div> -->
+
+<!-- behaviour subject -->
+
+<!-- not good way of writing code -->
+<!-- <div *ngIf="user$ | async">
+  {{ (user$ | async)?.name }}
+</div> -->
+
+<!-- <div *ngIf="user$ | async as user">
+  {{ user.name }}
+</div> -->
+
+<!-- combine latest -->
+
+<div *ngIf="data$ | async as data">
+  <div *ngFor="let user of data.users">{{ user.name }}</div>
+
+  <div *ngFor="let user of data.filteredUsers">
+    {{ user }}
+  </div>
+</div>
